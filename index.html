@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <title>Gemini API App</title>
+</head>
+
+<body>
+    <video autoplay muted loop id="vFondo">
+        <source src="video/fondo.mp4" type="video/mp4">
+        El video no se puede reproducir.
+    </video>
+
+    <section>
+
+    <div class="padre">
+        <div class="container">
+            <div class="loader" id="loaderGemini"></div>
+            <div class="conte-img">
+            <h2>Respuesta de Gemini:</h2>
+            <div class="img"> <img id="img1" src="images/geminiLogo.png" alt=""></div>
+            </div>
+            <div id="responseContainer">
+            </div>
+        </div>
+
+        <div id="container1">
+            <div class="loader" id="loaderMistral"></div>
+            <div class="conte-img">
+            <h2>Respuesta de Mistral:</h2>
+            <div class="img"> <img id="img2" src="images/logoMistral.png" alt=""></div>
+            </div>
+            <div id="responseContainer1">
+            </div>
+        </div>
+    </div>
+    <div class="boton">
+        <textarea id="inputText"
+            placeholder="Escribe tu pregunta o texto aquí... Por ejemplo: Explica cómo funciona la IA en pocas palabras"></textarea>
+        <button onclick="resumenConMistralYGemini()">Enviar</button>
+    </div>
+</section>
+    <script src="index.js"></script>
+</body>
+</html>
